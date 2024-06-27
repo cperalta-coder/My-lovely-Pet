@@ -1,0 +1,55 @@
+body {
+    margin-top: 50px!important;
+}
+
+body {
+    background: url(../img/background_in_space.webp);
+}
+
+.header {
+    color: #f8f8f8;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+
+/*h2 {
+    padding: 20px;
+    background-color: #eb9a9a;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(187, 4, 4, 0.1);
+    text-align-last: center;
+}
+
+#formMascota {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#formMascota label,
+#formMascota input,
+#formMascota select {
+    display: block ;
+    margin-bottom: 5px;
+}
+#formMascota input{
+    background-color: rgb(240, 226, 202);
+}
+
+#formMascota button {
+    padding: 10px 20px;
+    background-color: #8ec590;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+#formMascota button:hover {
+    background-color: #009726;
+}

@@ -1,0 +1,35 @@
+body {
+    background: url(../img/background_in_space.webp);
+}
+
+/*#relacionMascotaDueno{
+    padding: 20px;
+    background-color: #eb9a9a;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(187, 4, 4, 0.1);
+    text-align-last: center;
+}
+
+#relacion{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#relacion label,
+#relacion select{
+    display: block;
+    margin-bottom: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #8ec590;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+#relacion button:hover{
+    background-color: #009726;
+}

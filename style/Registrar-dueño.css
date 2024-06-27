@@ -1,0 +1,53 @@
+body {
+    margin-top: 50px!important;
+}
+
+body {
+    background: url(../img/background_in_space.webp);
+}
+
+.header {
+    color: #f2f9ff;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #fbfdff;
+}
+/* h2{
+    padding: 20px;
+    background-color: #eb9a9a;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(187, 4, 4, 0.1);
+    text-align-last: center;
+}
+
+#Dueno{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#Dueno label,
+#oDueno input,
+#oDueno select{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#Dueno input{
+    background-color: rgb(240, 226, 202);
+}
+Button{
+    padding: 10px 20px;
+    background-color: #8ec590;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+ button:hover{
+    background-color: #009726;
+}   */

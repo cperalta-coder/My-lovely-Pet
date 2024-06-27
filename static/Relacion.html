@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style/Relacion.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Relacion</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Relacionar Mascota con Dueño y Servicios</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      </head>
+      <body class="text-light">
+        <div class="container">
+          <center><h2>My Lovely Pet</h2></center>
+          <center><legend class="text-center header">Servicios</legend></center>
+          <form>
+            
+            <div class="form-group">
+              <label for="nombreMascota">Nombre de la mascota:</label>
+              <input type="text" class="form-control" id="nombreMascota" placeholder="Ingrese el nombre de la mascota" required>
+            </div>
+            <div class="form-group">
+              <label for="tipoMascota">Tipo de mascota:</label>
+              <input type="text" class="form-control" id="tipoMascota" placeholder="Ej. Perro, Gato, etc." required>
+            </div>
+      
+            
+            <h3>Datos del dueño:</h3>
+            <div class="form-group">
+              <label for="nombreDueño">Nombre del dueño:</label>
+              <input type="text" class="form-control" id="nombreDueño" placeholder="Ingrese el nombre del dueño" required>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" class="form-control" id="telefono" placeholder="Ingrese el teléfono del dueño" required>
+            </div>
+      
+            
+            <h3>Servicios pedidos:</h3>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="servicio1" value="consulta">
+                <label class="form-check-label" for="servicio1">Consulta veterinaria</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="servicio2" value="vacunacion">
+                <label class="form-check-label" for="servicio2">Vacunación</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="servicio3" value="desparasitacion">
+                <label class="form-check-label" for="servicio3">Desparasitación</label>
+              </div>
+            </div>
+      
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      
+        <!-- Incluir Bootstrap JS y dependencias de Popper.js y jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      </body>
+      </html>
