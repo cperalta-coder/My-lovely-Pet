@@ -45,6 +45,10 @@
                 <label for="telefono" class="form-label">Teléfono</label>
                 <input type="tel" class="form-control" id="telefono" required>
             </div>
+            <div class="col-md-6">
+                <label for="cedula" class="form-label">Cedula de Identidad</label>
+                <input type="tel" class="form-control" id="cedula" required>
+            </div>
             <div class="col-12">
                 <button type="button" class="btn btn-primary" onclick="guardarDatosDueño()">Guardar datos</button>
                 <a href="./registrar-mascotas.html" class="btn btn-primary">Siguiente...</a>
@@ -63,6 +67,7 @@
                         <th>Fecha de Nacimiento</th>
                         <th>Correo</th>
                         <th>Teléfono</th>
+                        <th>Cedula</th>
                     </tr>
                 </thead>
                 <tbody id="dueñosTabla">
@@ -82,6 +87,7 @@
             let fechaNacimiento = document.getElementById('fechaNacimiento').value;
             let correo = document.getElementById('email').value;
             let telefono = document.getElementById('telefono').value;
+            let cedula = document.getElementById('cedula').value;
 
             // Guardar en sessionStorage
             let contadorDueños = sessionStorage.getItem('contadorDueños') || 0;
@@ -93,6 +99,7 @@
             sessionStorage.setItem(`dueño-${contadorDueños}-fechaNacimiento`, fechaNacimiento);
             sessionStorage.setItem(`dueño-${contadorDueños}-correo`, correo);
             sessionStorage.setItem(`dueño-${contadorDueños}-telefono`, telefono);
+            sessionStorage.setItem(`dueño-${contadorDueños}-cedula`, cedula);
             sessionStorage.setItem('contadorDueños', contadorDueños);
 
             // Actualizar tabla de dueños registrados
@@ -113,6 +120,7 @@
                 let fechaNacimiento = sessionStorage.getItem(`dueño-${i}-fechaNacimiento`);
                 let correo = sessionStorage.getItem(`dueño-${i}-correo`);
                 let telefono = sessionStorage.getItem(`dueño-${i}-telefono`);
+                let cedula = sessionStorage.getItem(`dueño-${i}-cedula`);
 
                 let fila = `
                     <tr class="text-light">
@@ -123,6 +131,7 @@
                         <td>${fechaNacimiento}</td>
                         <td>${correo}</td>
                         <td>${telefono}</td>
+                        <td>${cedula}</td>
                     </tr>
                 `;
                 tabla.innerHTML += fila;

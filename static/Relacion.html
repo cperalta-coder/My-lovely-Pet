@@ -1,4 +1,3 @@
-<!-- relacion.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,6 @@
                     <tr class="text-light">
                         <th>Dueño</th>
                         <th>Mascotas</th>
-
                     </tr>
                 </thead>
                 <tbody id="relacionTabla">
@@ -28,25 +26,27 @@
     </div>
 
     <script>
-      document.onload(cargarTablaRelaciones());
         // Función para cargar la tabla de relaciones
         function cargarTablaRelaciones() {
             let tablaRelacion = document.getElementById('relacionTabla');
             tablaRelacion.innerHTML = '';
 
             let contadorDueños = sessionStorage.getItem('contadorDueños') || 0;
-
+            let contadorMascotas = sessionStorage.getItem('contadorMascotas') || 0;
+            console.log(contadorDueños);
             for (let i = 1; i <= contadorDueños; i++) {
                 let nombreDueño = sessionStorage.getItem(`dueño-${i}-nombre`);
                 let mascotasDueño = JSON.parse(sessionStorage.getItem(`dueño-${i}-mascotas`));
                 let mascotasHTML = '';
 
-                for (let j = 0; j < mascotasDueño.length; j++) {
-                    let indiceMascota = mascotasDueño[j];
+                // Construir lista de mascotas del dueño
+                for (let j = 0; j < contadorMascotas.length; j++) {
+                    let indiceMascota = contadorMascotas[j];
                     let nombreMascota = sessionStorage.getItem(`mascota-${indiceMascota}-nombre`);
                     mascotasHTML += `${nombreMascota}, `;
                 }
 
+                // Crear fila para la tabla de relaciones
                 let fila = `
                     <tr class="text-light">
                         <td>${nombreDueño}</td>
@@ -57,11 +57,13 @@
                 tablaRelacion.innerHTML += fila;
             }
         }
-        
+
         // Cargar tabla de relaciones al cargar la página
         window.onload = function() {
             cargarTablaRelaciones();
         };
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
