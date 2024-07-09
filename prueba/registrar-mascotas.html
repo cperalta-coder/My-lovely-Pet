@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/Registrar-Mascota.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Registrar Mascota</title>
+</head>
+<body class="text-light">
+    <center>
+        <h1 class="text-center mt-5 mb-4">My Lovely Pet</h1>
+        <h2 class="text-center mt-5 mb-4">Registrar Mascota</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post" onsubmit="guardarDatosMascota(event)">
+                            <fieldset>
+                                <legend 
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="nombreMascota" name="name" type="text" placeholder="Nombre de la Mascota:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="raza" name="name" type="text" placeholder="Raza:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <select class="form-control" id="generoMascota" required>
+                                            <option value="">Seleccione el género de la Mascota:</option>
+                                            <option value="macho">Macho</option>
+                                            <option value="hembra">Hembra</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="edadMascota" name="name" type="number" placeholder="Edad:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="fechaNacimientoMascota" name="name" type="date" placeholder="Fecha de Nacimiento:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="color" name="email" type="text" placeholder="Color:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                                    <div class="col-md-8">
+                                        <input id="peso" name="phone" type="number" placeholder="Peso Kg:" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg">Guardar datos</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function guardarDatosMascota(event) {
+            event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+            // Obtener valores del formulario
+            let nombreMascota = document.getElementById('nombreMascota').value;
+            let raza = document.getElementById('raza').value;
+            let generoMascota = document.getElementById('generoMascota').value;
+            let edadMascota = document.getElementById('edadMascota').value;
+            let fechaNacimientoMascota = document.getElementById('fechaNacimientoMascota').value;
+            let color = document.getElementById('color').value;
+            let peso = document.getElementById('peso').value;
+
+            // Crear objeto con los datos de la mascota
+            let mascota = {
+                nombreMascota: nombreMascota,
+                raza: raza,
+                generoMascota: generoMascota,
+                edadMascota: edadMascota,
+                fechaNacimientoMascota: fechaNacimientoMascota,
+                color: color,
+                peso: peso
+            };
+
+            // Obtener datos actuales de sessionStorage o inicializar un arreglo vacío
+            let mascotas = JSON.parse(sessionStorage.getItem('mascotas')) || [];
+
+            // Agregar la nueva mascota al arreglo
+            mascotas.push(mascota);
+
+            // Guardar el arreglo actualizado en sessionStorage
+            sessionStorage.setItem('mascotas', JSON.stringify(mascotas));
+
+            // Limpiar el formulario después de guardar
+            document.getElementById('nombreMascota').value = '';
+            document.getElementById('raza').value = '';
+            document.getElementById('generoMascota').value = '';
+            document.getElementById('edadMascota').value = '';
+            document.getElementById('fechaNacimientoMascota').value = '';
+            document.getElementById('color').value = '';
+            document.getElementById('peso').value = '';
+
+            // Mostrar mensaje o realizar cualquier otra acción deseada después de guardar
+            alert('Datos de la mascota guardados correctamente.');
+        }
+    </script>
+</body>
+</html>
